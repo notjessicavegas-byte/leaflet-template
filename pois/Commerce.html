@@ -174,16 +174,16 @@
     </div>
 
     <script>
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const poiId = urlParams.get('id');
-        const state = localStorage.getItem('visitedPOIs');
-        const visited = state ? JSON.parse(state) : [];
-        if (!poiId || !visited.includes(poiId)) {
-            // Redirect back to map if accessed without being unlocked
-            window.location.href = '../index.html';
-        }
-
+        /*
+                const urlParams = new URLSearchParams(window.location.search);
+                const poiId = urlParams.get('id');
+                const state = localStorage.getItem('visitedPOIs');
+                const visited = state ? JSON.parse(state) : [];
+                if (!poiId || !visited.includes(poiId)) {
+                    // Redirect back to map if accessed without being unlocked
+                    window.location.href = '../index.html';
+                }
+        */
     </script>
 </body>
 
