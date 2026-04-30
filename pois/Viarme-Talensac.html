@@ -1,21 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Viarme-Talensac</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Un lieu à retrouver</title>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: #a09fa4;
+            /* Grey color matching the design */
+            color: #000;
+            font-family: system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-section {
+            width: 100%;
+            height: 55vh;
+            /* Takes up top portion of the screen */
+            position: relative;
+            /* Replace the url below with your interior church/renovation image (e.g., url('../assets/image/renovation.jpg')) */
+            background-image: url('../assets/image/interieur_chapelle.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Gradient overlay to seamlessly fade the image into the grey background */
+        .image-fade {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 15vh;
+            background: linear-gradient(to bottom,
+                    rgba(160, 159, 164, 0) 0%,
+                    rgba(160, 159, 164, 1) 100%);
+        }
+
+        .content-section {
+            padding: 1rem 1.5rem 3rem;
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 0 0 0.2rem 0;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin: 0 0 1.5rem 0;
+            color: #222;
+        }
+
+        .paragraph {
+            font-size: 1.15rem;
+            line-height: 1.5;
+            margin: 0;
+            color: #111;
+        }
+
+        .back-btn-container {
+            margin-top: auto;
+            /* Push to bottom */
+            padding-top: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #000;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="poi-container">
-        <h1>Viarme-Talensac</h1>
-        <p>A lively district known for its markets and vibrant local community.</p>
-        <br>
-        <a href="../index.html" class="btn" style="background-color: #6b7280;">Back to Map</a>
+    <div class="image-section">
+        <div class="image-fade"></div>
+    </div>
+
+    <div class="content-section">
+        <h1>Un lieu à retrouver</h1>
+        <p class="subtitle">Enfin, une chapelle</p>
+        <p class="paragraph">
+            Le lieu est toujours là. Invisible depuis la rue, il faut s'en
+            approcher, changer d'angle, regarder autrement. Caché, et pourtant
+            bien présent. Aujourd'hui, cet endroit attend une nouvelle vie. À
+            vous de le révéler.
+        </p>
+
+        <div class="back-btn-container">
+            <a href="../index.html" class="btn">Retour à la carte</a>
+        </div>
     </div>
 
     <script>
+        /*
         const urlParams = new URLSearchParams(window.location.search);
         const poiId = urlParams.get('id');
         const state = localStorage.getItem('visitedPOIs');
@@ -24,6 +131,8 @@
             // Redirect back to map if accessed without being unlocked
             window.location.href = '../index.html';
         }
+            */
     </script>
 </body>
+
 </html>

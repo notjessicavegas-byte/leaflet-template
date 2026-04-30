@@ -1,21 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Chapelle du Martray</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Un lieu vivant</title>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: #ebd7c0;
+            /* Peach/Beige background matching the illustration */
+            color: #000;
+            font-family: system-ui, -apple-system, sans-serif;
+            height: 100%;
+        }
+
+        .bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Replace the url below with your actual theater illustration image */
+            background-image: url('../assets/image/chapelle_martray.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .poi-container {
+            max-width: 100%;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-section {
+            max-width: 320px;
+            /* Pushing slightly down to match the text placement in the design */
+            margin-top: 10vh;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            color: #000;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 0 0 1rem 0;
+            color: #111;
+            letter-spacing: -0.5px;
+        }
+
+        .paragraph {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin: 0;
+            color: #111;
+            font-weight: 400;
+        }
+
+        .back-btn-container {
+            margin-top: 2.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #000;
+        }
+    </style>
 </head>
+
 <body>
+    <div class="bg-container"></div>
+
     <div class="poi-container">
-        <h1>Chapelle du Martray</h1>
-        <p>A beautiful historic chapel, standing as a testament to the city's architectural heritage.</p>
-        <br>
-        <a href="../index.html" class="btn" style="background-color: #6b7280;">Back to Map</a>
+        <div class="content-section">
+            <h1>Un lieu vivant</h1>
+            <p class="subtitle">Le rideau va se lever</p>
+            <p class="paragraph">
+                La chapelle ne restera pas silencieuse. Un théâtre de proximité
+                prend forme, dans la continuité du Krapo Roy, le plus petit théâtre
+                de Nantes. Spectacles, résidences, ateliers, rencontres. Un lieu
+                ancré dans le quartier, ouvert à tous, où habitants, artistes et
+                associations se croisent.
+            </p>
+
+            <div class="back-btn-container">
+                <a href="../index.html" class="btn">Retour à la carte</a>
+            </div>
+        </div>
     </div>
 
     <script>
+        /*
         const urlParams = new URLSearchParams(window.location.search);
         const poiId = urlParams.get('id');
         const state = localStorage.getItem('visitedPOIs');
@@ -24,6 +128,8 @@
             // Redirect back to map if accessed without being unlocked
             window.location.href = '../index.html';
         }
+            */
     </script>
 </body>
+
 </html>
