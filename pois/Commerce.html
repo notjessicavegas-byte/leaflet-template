@@ -1,21 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Commerce</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Un lieu invisible</title>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: #e3d7c3;
+            /* Beige color to match the design */
+            color: #000;
+            font-family: "Playfair Display", serif;
+        }
+
+        .bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("/assets/image/commerce.png");
+            background-size: cover;
+            background-position: center -1216.1px;
+
+            @media (width > 1000px) {
+                background-position-y: 105%;
+            }
+        }
+
+        .poi-container {
+            max-width: unset;
+            margin: 0;
+
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(to bottom,
+                    rgba(227, 215, 195, 0) 0%,
+                    rgba(227, 215, 195, 1) 20%,
+                    rgba(227, 215, 195, 1) 70%,
+                    rgba(227, 215, 195, 0) 100%);
+        }
+
+        .header-section {
+            padding: 1rem 1rem 1.5rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            margin: 0;
+            color: #222;
+        }
+
+        .content-section {
+            padding: 1.5rem 2rem;
+            text-align: center;
+            max-width: 650px;
+        }
+
+        .content-section p {
+            font-family:
+                system-ui,
+                -apple-system,
+                sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.5;
+            margin: 0;
+            color: #111;
+        }
+
+        .direction-section {
+            padding: 1.5rem 2rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .direction-title {
+            font-family:
+                system-ui,
+                -apple-system,
+                sans-serif;
+            font-size: 1.15rem;
+            margin: 0 0 0.2rem 0;
+            color: #111;
+        }
+
+        .direction-text {
+            font-family:
+                system-ui,
+                -apple-system,
+                sans-serif;
+            font-size: 1.15rem;
+            margin: 0;
+            color: #111;
+        }
+
+        .back-btn-container {
+            padding: 2rem 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family:
+                system-ui,
+                -apple-system,
+                sans-serif;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #000;
+        }
+    </style>
 </head>
+
 <body>
+    <div class="bg-container"></div>
+
     <div class="poi-container">
-        <h1>Commerce</h1>
-        <p>The central plaza of Nantes. A bustling intersection of shops, cafes, and city life.</p>
-        <br>
-        <a href="../index.html" class="btn" style="background-color: #6b7280;">Back to Map</a>
+        <div class="header-section">
+            <h1>Un lieu invisible</h1>
+            <p class="subtitle">Vous passez devant... sans le voir</p>
+        </div>
+
+        <div class="content-section">
+            <p>
+                À 11 minutes à pied d'ici, à trois arrêts de tram à peine, des
+                milliers de personnes passent chaque jour devant ce lieu sans le
+                remarquer. Invisible depuis la rue, il ne s'affiche pas. Il n'a pas
+                disparu, il a simplement été oublié. Et pourtant, il est toujours là.
+            </p>
+        </div>
+
+        <div class="direction-section">
+            <p class="direction-title">Direction</p>
+            <p class="direction-text">Chapelle du Martray à 11 min à pied.</p>
+        </div>
+
+        <div class="back-btn-container">
+            <a href="../index.html" class="btn">Retour à la carte</a>
+        </div>
     </div>
 
     <script>
+
         const urlParams = new URLSearchParams(window.location.search);
         const poiId = urlParams.get('id');
         const state = localStorage.getItem('visitedPOIs');
@@ -24,6 +183,8 @@
             // Redirect back to map if accessed without being unlocked
             window.location.href = '../index.html';
         }
+
     </script>
 </body>
+
 </html>
