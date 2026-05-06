@@ -4,41 +4,41 @@
     "name": "Commerce",
     "lat": 47.21462300905903,
     "lng": -1.5558587045459333,
-    "url": "/pois/Commerce.html"
+    "url": "pois/Commerce.html"
   },
   {
     "id": "Bretagne",
     "name": "Bretagne",
     "lat": 47.21731210470958,
     "lng": -1.558382634618704,
-    "url": "/pois/Bretagne.html"
+    "url": "pois/Bretagne.html"
   },
   {
     "id": "Jean Jaurès",
     "name": "Jean Jaurès",
     "lat": 47.21860250468865,
     "lng": -1.560416662773181,
-    "url": "/pois/Jean-Jaures.html"
+    "url": "pois/Jean-Jaures.html"
   },
   {
     "id": "Viarme-Talensac",
     "name": "Viarme-Talensac",
     "lat": 47.22140594496348,
     "lng": -1.5626614627683353,
-    "url": "/pois/Viarme-Talensac.html"
+    "url": "pois/Viarme-Talensac.html"
   },
   {
     "id": "Implantation module",
     "name": "Implantation module",
     "lat": 47.2196667,
     "lng": -1.5613333333333335,
-    "url": "/pois/Implantation-module.html"
+    "url": "pois/Implantation-module.html"
   },
   {
     "id": "Chapelle du Martray",
     "name": "Chapelle du Martray",
     "lat": 47.21956239801544,
     "lng": -1.5605106920323555,
-    "url": "/pois/Chapelle-du-Martray.html"
+    "url": "pois/Chapelle-du-Martray.html"
   }
 ]
